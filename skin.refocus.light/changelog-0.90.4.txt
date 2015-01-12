@@ -1,8 +1,0 @@
-0.90.4
- - removed background opacity option
- - removed home vignette option
- --> should improve overall speed and smoothness
- - fixed bracket mismatch & missing includes
- --> special thanks to spjonez!
- - additional adaptations for gotham + minor fixes
- - all new busy dialog (inspired by BigNoid)
