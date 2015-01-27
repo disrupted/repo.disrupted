@@ -17,4 +17,32 @@
 		<platform>all</platform>
 	</extension>
 </addon>
+<addon id="skin.1080x" version="3.44.40" name="1080X" provider-name="Piers|freem@n">
+	<requires>
+		<import addon="xbmc.gui" version="5.3.0" />
+		<import addon="service.skin.widgets" version="0.0.29" />
+		<import addon="script.artwork.downloader" version="12.0.29" />
+		<import addon="script.tv.show.next.aired" version="6.0.13" />
+		<import addon="script.globalsearch" version="3.0.4" />
+		<import addon="script.favourites" version="6.0.1" />
+		<import addon="script.artistslideshow" version="1.7.0" />
+		<import addon="script.videolanguage" version="0.1.0" />
+		<import addon="script.randomandlastitems" version="2.2.2" />
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.76" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+        <summary lang="de">1080X für Kodi 14.x aktualisiert von Piers - freem@n's Mod</summary>
+        <summary lang="en">1080XF by Piers, xhaggi and Black - modded by freem@n</summary>
+        <description lang="de">1080XF liefert Ihnen eine Haut mit gesundem Menschenverstand Home-Bildschirm, einem Schwerpunkt auf grafische Qualität, flüssige Animationen und sehr gut integrierte Funktionen / Add-ons.</description>
+        <description lang="en">1080XF delivers a common sense home screen, a focus on modern textures, smooth animations and very well integrated functions/add-ons.</description>
+        <disclaimer lang="de">Nur kompatibel mit Kodi 14.x "Helix"</disclaimer>
+        <disclaimer lang="en">Kodi v14.x Helix</disclaimer>
+        <platform>all</platform>
+        <license>CCACC BY-NC-SA 3.0</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=210425</forum>
+        <source>https://github.com/freeman212/1080X</source>
+	</extension>
+</addon>
 </addons>
