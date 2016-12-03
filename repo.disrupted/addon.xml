@@ -6,6 +6,9 @@
     <datadir zip="true">https://raw.github.com/disrupted/repo.disrupted/master</datadir>
   </extension>
   <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     <summary>disrupted's add-ons</summary>
     <description>unofficial add-on repo for Kodi</description>
     <platform>all</platform>
