@@ -1,9 +1,12 @@
 #!/bin/bash
-PKG_NAME="plugin.video.youtube"
+PKG_NAME='plugin.video.youtube'
 
 rsync -avh --progress --exclude=".*" ../$PKG_NAME $PKG_NAME/
-version="5.3.7"
-cd $PKG_NAME > /dev/null
+#cd ..
+#curl -v -o $PKG_NAME/$PKG_NAME/ FILE://$PKG_NAME
+cd $PKG_NAME
+version="5.3.8"
+# cd $PKG_NAME > /dev/null
 zip -r $PKG_NAME-$version.zip $PKG_NAME -x $PKG_NAME/*.git*\* $PKG_NAME/*.DS_Store*\*
 #tail -n +2 addon.xml > addon.xml # remove first line
 #comm -23 addon.xml ../addons.xml
