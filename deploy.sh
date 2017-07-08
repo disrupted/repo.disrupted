@@ -5,7 +5,7 @@ rsync -avh --progress --exclude=".*" ../$PKG_NAME $PKG_NAME/
 #cd ..
 #curl -v -o $PKG_NAME/$PKG_NAME/ FILE://$PKG_NAME
 cd $PKG_NAME
-version=$(tail -n+2 addon.xml | head -n1 | cut -d\" -f6)
+version=$(tail -n+2 $PKG_NAME/addon.xml | head -n1 | cut -d\" -f6)
 # cd $PKG_NAME > /dev/null
 zip -r $PKG_NAME-$version.zip $PKG_NAME -x $PKG_NAME/*.git*\* $PKG_NAME/*.DS_Store*\*
 #tail -n +2 addon.xml > addon.xml # remove first line
