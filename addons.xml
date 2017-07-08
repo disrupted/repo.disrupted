@@ -1,65 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-  <addon id="skin.refocus.light" version="1.14.5" name="reFocus light" provider-name="freem@n">
-    <requires>
-      <import addon="xbmc.gui" version="5.3.0" />
-      <import addon="script.favourites" version="6.0.0" />
-      <import addon="script.playlists" version="2.0.0" />
-      <import addon="script.artwork.downloader" version="12.0.29" />
-    </requires>
-    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
-      <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <summary>reFocus light for Raspberry Pi</summary>
-      <description>lightweight version of the reFocus BIG skin especially for low-power devices like the Raspberry Pi</description>
-      <disclaimer>mouse usage not supported</disclaimer>
-      <platform>all</platform>
-    </extension>
-  </addon>
-  <addon id="skin.1080x" version="3.44.40" name="1080X" provider-name="Piers|freem@n">
-    <requires>
-      <import addon="xbmc.gui" version="5.3.0" />
-      <import addon="service.skin.widgets" version="0.0.29" />
-      <import addon="script.artwork.downloader" version="12.0.29" />
-      <import addon="script.tv.show.next.aired" version="6.0.13" />
-      <import addon="script.globalsearch" version="3.0.4" />
-      <import addon="script.favourites" version="6.0.1" />
-      <import addon="script.artistslideshow" version="1.7.0" />
-      <import addon="script.videolanguage" version="0.1.0" />
-      <import addon="script.randomandlastitems" version="2.2.2" />
-    </requires>
-    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.76" debugging="false">
-      <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <summary lang="de">1080X für Kodi 14.x aktualisiert von Piers - freem@n's Mod</summary>
-      <summary lang="en">1080XF by Piers, xhaggi and Black - modded by freem@n</summary>
-      <description lang="de">1080XF liefert Ihnen eine Haut mit gesundem Menschenverstand Home-Bildschirm, einem Schwerpunkt auf grafische Qualität, flüssige Animationen und sehr gut integrierte Funktionen / Add-ons.</description>
-      <description lang="en">1080XF delivers a common sense home screen, a focus on modern textures, smooth animations and very well integrated functions/add-ons.</description>
-      <disclaimer lang="de">Nur kompatibel mit Kodi 14.x "Helix"</disclaimer>
-      <disclaimer lang="en">Kodi v14.x Helix</disclaimer>
-      <platform>all</platform>
-      <license>CCACC BY-NC-SA 3.0</license>
-      <forum>http://forum.kodi.tv/showthread.php?tid=210425</forum>
-      <source>https://github.com/freeman212/1080X</source>
-    </extension>
-  </addon>
-  <addon id="plugin.video.youtube" name="YouTube" version="5.3.13~alpha6" provider-name="jdf76, bromix">
-    <requires>
-      <import addon="xbmc.python" version="2.19.0"/>
+  <addon id="plugin.video.youtube" name="YouTube" version="5.4.0" provider-name="bromix">
+  	<requires>
+  		<import addon="xbmc.python" version="2.19.0"/>
           <import addon="script.module.requests" version="2.12.4"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
-      <provides>video</provides>
-    </extension>
+  	</requires>
+  	<extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+  		<provides>video</provides>
+  	</extension>
       <extension point="xbmc.service" library="resources/lib/startup.py" start="startup" />
-    <extension point="xbmc.python.module" library="resources/lib/" />
-    <extension point="xbmc.addon.metadata">
+  	<extension point="xbmc.python.module" library="resources/lib/" />
+  	<extension point="xbmc.addon.metadata">
           <news>
-  [fix/upd] replace custom simple_requests with script.module.requests to resolve ssl and cross-platform issues
-  [add] 'Reset access manager' added to Maintenance section, sign out process(available when logged out) to clean up tokens in settings.xml
-  [upd] set default for SSL certificate verification to 'true'
+  [upd] Greek strings [Twilight0]
+  [upd] Polish strings [Etharr]
+  [upd] Finnish strings [teemue]
+  [upd] Spanish strings [roliverosc]
+  [fix/upd] resolve "Error Contents: 'q'" error [horstepipe]
+  [fix/upd] resolve Play All/Play from here not starting playback
+  [fix/upd] resolve playlists starting on second item
+  [fix/upd] allow dash in quality choices
+  [fix/upd] set content to files for menus, resolves mouse/scrolling
+  [fix/upd] fix cipher
+  [fix/upd] increase search history limit to 200
+  [fix/upd] storage db
+  [add] Safe Search to Settings -> General
+  [add] Thumbnail size to Settings -> General
+  [add] Auto-play suggested [mehdilauters]
+  [add] Automatic subtitles [Uukrull]
+  [add] My Subscriptions (Filtered) - whitelist/blacklist version of My Subscriptions [chhe]
+  [add] module extension point:
+      add-ons can now add plugin.video.youtube dependency and resolve youtube video id's or make v3 api requests using the youtube plugin
           </news>
           <assets>
               <icon>icon.png</icon>
@@ -67,14 +38,14 @@
           </assets>
           <summary lang="en">Plugin for YouTube</summary>
           <description lang="en">YouTube is one of the biggest video-sharing websites of the world.</description>
-      <summary lang="de">Plugin für YouTube</summary>
+  		<summary lang="de">Plugin für YouTube</summary>
           <description lang="de">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
           <summary lang="pl">Wtyczka YouTube</summary>
           <description lang="pl">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
-      <summary lang="hu">Kiegészítő  a YouTube-hoz</summary>
+  		<summary lang="hu">Kiegészítő  a YouTube-hoz</summary>
           <description lang="hu">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
           <summary lang="es">Plugin para YouTube</summary>
-          <description lang="es">YouTube es un uno de los mayores sitios web de intercambio de vídeos del mundo.</description>
+          <description lang="es">YouTube es uno de los mayores sitios web de intercambio de vídeos del mundo.</description>
           <summary lang="ru">Видеодополнение YouTube</summary>
           <description lang="ru">Данное дополнение позволяет находить и смотреть видео на всеми любимом сайте.</description>
           <summary lang="fr">Plugin pour YouTube</summary>
@@ -83,18 +54,76 @@
           <description lang="zh">「Youtube」是全世界最大的影片分享網站</description>
           <summary lang="bg">Добавка за YouTube</summary>
           <description lang="bg">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
-      <summary lang="el">Πρόσθετο YouTube</summary>
+  		<summary lang="el">Πρόσθετο YouTube</summary>
           <description lang="el">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
           <summary lang="no">Tillegg for YouTube</summary>
           <description lang="no">YouTube er en av verdens største nettsider for videodeling.</description>
           <disclaimer lang="en"></disclaimer>
-      <language></language>
-      <platform>all</platform>
-      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-      <forum>http://forum.kodi.tv/showthread.php?tid=267160</forum>
-      <website>http://www.youtube.com</website>
-      <email>ytplugin at datanet dot ws</email>
-      <source>https://github.com/Kolifanes/plugin.video.youtube</source>
+  		<language></language>
+  		<platform>all</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.kodi.tv/showthread.php?tid=267160</forum>
+  		<website>http://www.youtube.com</website>
+  		<email>ytplugin at datanet dot ws</email>
+  		<source>https://github.com/Kolifanes/plugin.video.youtube</source>
+  	</extension>
+  </addon>
+  <addon id="repo.disrupted" name="disrupted's Add-ons" version="1.0.0" provider-name="disrupted">
+    <extension point="xbmc.addon.repository" name="disrupted's Repository">
+      <info compressed="false">https://raw.github.com/disrupted/repo.disrupted/master/addons.xml</info>
+      <checksum>https://raw.github.com/disrupted/repo.disrupted/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.github.com/disrupted/repo.disrupted/master</datadir>
     </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>disrupted's add-ons</summary>
+      <description>unofficial add-on repo for Kodi</description>
+      <platform>all</platform>
+      <website>https://github.com/disrupted/repo.disrupted</website>
+    </extension>
+  </addon>
+  <addon id="skin.1080x" version="3.44.40" name="1080X" provider-name="Piers|freem@n">
+  	<requires>
+  		<import addon="xbmc.gui" version="5.3.0" />
+  		<import addon="service.skin.widgets" version="0.0.29" />
+  		<import addon="script.artwork.downloader" version="12.0.29" />
+  		<import addon="script.tv.show.next.aired" version="6.0.13" />
+  		<import addon="script.globalsearch" version="3.0.4" />
+  		<import addon="script.favourites" version="6.0.1" />
+  		<import addon="script.artistslideshow" version="1.7.0" />
+  		<import addon="script.videolanguage" version="0.1.0" />
+  		<import addon="script.randomandlastitems" version="2.2.2" />
+  	</requires>
+  	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.76" debugging="false">
+  		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+          <summary lang="de">1080X für Kodi 14.x aktualisiert von Piers - freem@n's Mod</summary>
+          <summary lang="en">1080XF by Piers, xhaggi and Black - modded by freem@n</summary>
+          <description lang="de">1080XF liefert Ihnen eine Haut mit gesundem Menschenverstand Home-Bildschirm, einem Schwerpunkt auf grafische Qualität, flüssige Animationen und sehr gut integrierte Funktionen / Add-ons.</description>
+          <description lang="en">1080XF delivers a common sense home screen, a focus on modern textures, smooth animations and very well integrated functions/add-ons.</description>
+          <disclaimer lang="de">Nur kompatibel mit Kodi 14.x "Helix"</disclaimer>
+          <disclaimer lang="en">Kodi v14.x Helix</disclaimer>
+          <platform>all</platform>
+          <license>CCACC BY-NC-SA 3.0</license>
+          <forum>http://forum.kodi.tv/showthread.php?tid=210425</forum>
+          <source>https://github.com/freeman212/1080X</source>
+  	</extension>
+  </addon>
+  <addon id="skin.refocus.light" version="1.14.5" name="reFocus light" provider-name="freem@n">
+  	<requires>
+  		<import addon="xbmc.gui" version="5.3.0"/>
+  		<import addon="script.favourites" version="6.0.0"/>
+  		<import addon="script.playlists" version="2.0.0"/>
+  		<import addon="script.artwork.downloader" version="12.0.29"/>
+  	</requires>
+  	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
+  		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<summary>reFocus light for Raspberry Pi</summary>
+  		<description>lightweight version of the reFocus BIG skin especially for low-power devices like the Raspberry Pi</description>
+  		<disclaimer>mouse usage not supported</disclaimer>
+  		<platform>all</platform>
+  	</extension>
   </addon>
 </addons>
