@@ -1,6 +1,7 @@
 #!/bin/bash
 PKG_NAME='plugin.video.youtube'
 
+version_prev=$(tail -n+2 $PKG_NAME/addon.xml | head -n1 | cut -d\" -f6)
 rsync -avh --progress --exclude=".*" ../$PKG_NAME $PKG_NAME/
 #cd ..
 #curl -v -o $PKG_NAME/$PKG_NAME/ FILE://$PKG_NAME
@@ -25,7 +26,7 @@ do
 done
 echo -e "</addons>" >> addons.xml.new
 cat addons.xml.new
-echo -e "\nDoes this look right?"
+echo -e "\n$version_prev → $version\nDoes this look right?"
 #echo "don't forget to copy over the content from $PKG_NAME/addon.xml to addons.xml"
 #read -t 30
 read
