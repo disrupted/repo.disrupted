@@ -1,5 +1,5 @@
 #!/bin/bash
-PKG_NAME='skin.arctic.zephyr.plus'
+PKG_NAME='plugin.video.youtube'
 
 version_prev=$(tail -n+2 $PKG_NAME/addon.xml | head -n1 | cut -d\" -f6)
 rsync -avh --progress --exclude=".*" ../$PKG_NAME $PKG_NAME/
