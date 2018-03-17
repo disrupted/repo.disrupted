@@ -28,7 +28,7 @@
           <source>https://github.com/freeman212/1080X</source>
   	</extension>
   </addon>
-  <addon id="plugin.video.youtube" name="YouTube" version="6.0.0~beta3" provider-name="bromix">
+  <addon id="plugin.video.youtube" name="YouTube" version="6.0.0~beta6" provider-name="bromix">
       <requires>
           <import addon="xbmc.python" version="2.20.0"/>
           <import addon="script.module.six"/>
@@ -57,6 +57,7 @@
   [fix] Signature deciphering
   [fix] context menu after playback
   [fix] alternative player, do not append headers
+  [fix] My Subscriptions (Filtered) channel matching
   [fix/upd] post play events happen post play
   [fix/upd] set title from metadata on play
   [upd] Use monitor to track api key changes
